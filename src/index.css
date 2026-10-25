@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+  }
+
+  @keyframes bounceSlow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.03); }
+  }
+
+  .animate-shake {
+    animation: shake 0.45s ease-in-out;
+  }
+
+  .animate-bounce-slow {
+    animation: bounceSlow 2.5s infinite ease-in-out;
+  }
+
+  .animate-spin-slow {
+    animation: spin 12s linear infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 2s infinite ease-in-out;
+  }
+}
+
+/* Preschool tactile feel */
+body {
+  background-color: #fdfbf7;
+  background-image: radial-gradient(#fed7aa 0.75px, transparent 0.75px), radial-gradient(#bae6fd 0.75px, #fdfbf7 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  min-height: 100vh;
+}
+
+/* Print Optimization for Preschool Worksheets */
+@media print {
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-area {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    border: 3px solid #f59e0b !important;
+    page-break-inside: avoid !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 8mm;
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Remix Bé Vui Học Toán - Lớp 3 Tuổi C2",
+  "description": "Ứng dụng tương tác ôn luyện toán mầm non dành cho các bé 3-4 tuổi - Giáo viên: Nguyễn Thị Huyền - Lớp 3 Tuổi C2 - Trường Mầm non Thạch Thất 2.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
